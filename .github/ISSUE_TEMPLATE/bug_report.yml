@@ -1,0 +1,40 @@
+name: Bug Report
+description: Submit the material package issue you encountered
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填全以下信息，否则可能无法定位问题。
+        Thank you for your feedback! Please fill in all the following information as much as possible, otherwise the problem may not be located.
+
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft version
+      placeholder: Example：1.20.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+             Problem description
+      description: 清楚描述你遇到了什么异常
+                   Clearly describe what abnormality you encountered
+      placeholder: 例如：手持堆肥桶时纹理显示为紫黑方块，放置后正常
+                   For example, when holding a composter, the texture displays as purple black squares, but it remains normal after being placed
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认事项
+             Items for Confirmation
+      options:
+        - label: 我已搜索过现有 Issue，确认没有重复报告
+                 I have searched for existing issues and confirmed that there are no duplicate reports
+          required: true
